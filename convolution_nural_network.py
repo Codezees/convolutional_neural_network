@@ -285,7 +285,7 @@ class convolutional_neural_network:
                 self.sys_breaks(f'The function given for the backwords propogaetion "{func_type}" is not valid')
 
             print(f'BackProp layer no:- {(i + 1)} / [{round(((i+1)/nur)*100)}% |{ "="*round(((i+1)/nur)*100)}{" "*(100 - round(((i)/nur)*100) )}| 100%]', end='\r')
-
+        self.updata_params(re_wi[::-1],re_bi[::-1])
         print('\n')
         return error_found
 
